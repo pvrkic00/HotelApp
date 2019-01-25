@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                     ConnectivityManager cm = (ConnectivityManager) getSystemService (Context.CONNECTIVITY_SERVICE);
 
                     if (cm.getActiveNetworkInfo () == null) {
-                        z = "Provjerite internet";
+                        z = "Provjerite internet vezu";
                        ToastNotify (z);
                     } else if (con==null) {
                         z = "Pogrešni podaci";
