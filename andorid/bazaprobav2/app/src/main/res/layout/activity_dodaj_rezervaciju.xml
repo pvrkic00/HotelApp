@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:weightSum="10"
+    tools:context=".gost.DodajRezervaciju">
+
+    <TextView
+        android:id="@+id/brojGostijuLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Odaberite broj gostiju"
+        android.support.design:layout_constraintStart_toStartOf="parent"
+        android.support.design:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerBrojGostiju"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android.support.design:layout_constraintStart_toStartOf="parent"
+        android.support.design:layout_constraintTop_toBottomOf="@+id/brojGostijuLabel" />
+
+    <TextView
+        android:id="@+id/DatumLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:text="Odaberite datum"
+        android.support.design:layout_constraintStart_toStartOf="parent"
+        android.support.design:layout_constraintTop_toBottomOf="@+id/spinnerBrojGostiju" />
+
+    <CalendarView
+        android:id="@+id/calendarRezervacija"
+        android:layout_width="242dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="124dp"
+        android.support.design:layout_constraintEnd_toEndOf="parent"
+        android.support.design:layout_constraintTop_toBottomOf="@+id/DatumLabel" />
+
+    <TextView
+        android:id="@+id/VrijemeRezervacijeRestoranaLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:text="Odaberite vrijeme"
+        android.support.design:layout_constraintEnd_toEndOf="parent"
+        android.support.design:layout_constraintTop_toBottomOf="@+id/spinnerBrojGostiju" />
+
+    <Spinner
+        android:id="@+id/spinnerVrijeme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="20dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android.support.design:layout_constraintEnd_toEndOf="parent"
+        android.support.design:layout_constraintTop_toBottomOf="@+id/VrijemeRezervacijeRestoranaLabel" />
+
+    <Button
+        android:id="@+id/RezervirajButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="Rezerviraj"
+        android:text="Rezerviraj"
+        android.support.design:layout_constraintBottom_toBottomOf="parent"
+        android.support.design:layout_constraintEnd_toEndOf="parent"
+        android.support.design:layout_constraintStart_toStartOf="parent"
+        android.support.design:layout_constraintTop_toBottomOf="@+id/calendarRezervacija" />
+</android.support.constraint.ConstraintLayout>
+
